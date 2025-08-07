@@ -21,6 +21,23 @@ const ContractorPage = () => {
                     </div>
                 </div>
             </div>
+
+             <div className="user-footer">
+                <div className="home" onClick={()=>{navigate('/')}}>
+                    <p>Home</p>
+                    
+                </div>
+
+                <div className="logout"onClick={()=>{
+                    localStorage.removeItem('contracttoken');
+                    localStorage.removeItem('userEmail');
+                    localStorage.removeItem('userId');
+                    navigate('/')
+
+                }}>
+                    <p>Logout</p>
+                </div>
+            </div>
         </div>
     )
 }

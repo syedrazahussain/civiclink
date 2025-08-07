@@ -52,7 +52,7 @@ const Updateformcontract = () => {
         };
 
         axios
-            .put(`http://localhost:5013/api/v1/admin/updatecontractor/${contractorId}`, data) // Use PUT request for updating
+            .put(`${process.env.REACT_APP_API_BASE_URL}/api/v1/admin/updatecontractor/${contractorId}`, data) // Use PUT request for updating
             .then((result) => {
                 console.log('Contractor updated successfully:', result);
                 message.success('Contractor Updated Successfully');

@@ -1,29 +1,90 @@
-.hero-container{
-    background-color: aliceblue;
-    display: flex;
-    justify-content: center;
-    margin: 2px;
-    padding: 30px;
-    height: auto;
-    
+.hero-section {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
-.all-btn {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-bottom: 40px;
-    background-color: aliceblue;
+
+.hero-banner {
+  max-width: 1200px;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.all-btn button {
-    background-color: indigo;
-    color: white;
-    padding: 20px 80px;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 400px;
 }
-.all-btn button:hover{
-    background-color: rgb(117, 4, 197);
-    transition: all ease-in 0.2s;
+
+.hero-text {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.button-group button {
+  background-color: #4f46e5;
+  color: white;
+  padding: 14px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button-group button:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .button-group button {
+    width: 100%;
+    max-width: 300px;
+  }
 }

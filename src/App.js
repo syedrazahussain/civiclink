@@ -23,48 +23,63 @@ import Myworkscontractor from './pages/Myworkscontractor'
 import Reportwork from './pages/Reportwork'
 import MyProfille from './pages/MyProfille'
 
-
-
-
 const App = () => {
   return (
     <div>
       <Navbar />
       <Routes>
 
+        {/* Public routes */}
         <Route path='/' element={
           <PublicRoute><Home /></PublicRoute>} />
         <Route path='/userloginpage' element={
-          <PublicRoute><UserLoginPage /></PublicRoute>} />
-        <Route path='/adminloginpage' element={<AdminLoginPage />} />
-        <Route path='/workerloginpage' element={<WorkerLoginPage />} />
-        <Route path='/userpage' element={
-          <ProtectedRoute><UserPage /></ProtectedRoute>
-        } />
-        <Route path='/usercomplaint' element={<UserComplaint />} />
+          <PublicRoute tokenKey="token" redirectTo="/userpage"><UserLoginPage /></PublicRoute>} />
+        <Route path='/adminloginpage' element={
+          <PublicRoute tokenKey="admintoken" redirectTo="/adminpage"><AdminLoginPage /></PublicRoute>} />
+        <Route path='/workerloginpage' element={
+          <PublicRoute tokenKey="contracttoken" redirectTo="/contractorpage"><WorkerLoginPage /></PublicRoute>} />
         <Route path='/registeruser' element={
-          <PublicRoute><RegisterUser /></PublicRoute>} />
-        <Route path='/adminpage' element={<AdminPage />} />
-        <Route path='/createcontract' element={<CreateContract />} />
-        <Route path='/contractorpage' element={<ContractorPage />} />
-        <Route path='/mycomplaints' element={<MyComplaints />} />
-        <Route path='/registeradmin' element={<RegisterAdmin />} />
-        <Route path='/viewcomplaints' element={<ViewComplaints />} />
-        <Route path='/allusersdata' element={<AllUsersData />} />
-        <Route path='/updatecontractlist' element={<UpdateContractList />} />
-        <Route path='/updateformcontract' element={<Updateformcontract />} />
-        <Route path="/updateformcontract/:contractorId" element={<Updateformcontract />} />
-        <Route path='/myworkscontractor' element={<Myworkscontractor />} />
-        <Route path='/reportwork' element={<Reportwork />} />
-        <Route path='/myprofile' element={<MyProfille />} />
+          <PublicRoute tokenKey="token"><RegisterUser /></PublicRoute>} />
+        <Route path='/registeradmin' element={
+          <PublicRoute tokenKey="admintoken"><RegisterAdmin /></PublicRoute>} />
 
+        {/* User protected routes */}
+        <Route path='/userpage' element={
+          <ProtectedRoute tokenKey="token" redirectTo="/userloginpage"><UserPage /></ProtectedRoute>} />
+        <Route path='/usercomplaint' element={
+          <ProtectedRoute tokenKey="token" redirectTo="/userloginpage"><UserComplaint /></ProtectedRoute>} />
+        <Route path='/mycomplaints' element={
+          <ProtectedRoute tokenKey="token" redirectTo="/userloginpage"><MyComplaints /></ProtectedRoute>} />
+        <Route path='/myprofile' element={
+          <ProtectedRoute tokenKey="token" redirectTo="/userloginpage"><MyProfille /></ProtectedRoute>} />
+
+        {/* Admin protected routes */}
+        <Route path='/adminpage' element={
+          <ProtectedRoute tokenKey="admintoken" redirectTo="/adminloginpage"><AdminPage /></ProtectedRoute>} />
+        <Route path='/createcontract' element={
+          <ProtectedRoute tokenKey="admintoken" redirectTo="/adminloginpage"><CreateContract /></ProtectedRoute>} />
+        <Route path='/viewcomplaints' element={
+          <ProtectedRoute tokenKey="admintoken" redirectTo="/adminloginpage"><ViewComplaints /></ProtectedRoute>} />
+        <Route path='/allusersdata' element={
+          <ProtectedRoute tokenKey="admintoken" redirectTo="/adminloginpage"><AllUsersData /></ProtectedRoute>} />
+        <Route path='/updatecontractlist' element={
+          <ProtectedRoute tokenKey="admintoken" redirectTo="/adminloginpage"><UpdateContractList /></ProtectedRoute>} />
+           <Route path='/reportwork' element={
+          <ProtectedRoute tokenKey="admintoken" redirectTo="/adminloginpage"><Reportwork /></ProtectedRoute>} />
+          <Route path='/updateformcontract' element={
+          <ProtectedRoute tokenKey="admintoken" redirectTo="/adminloginpage"><Updateformcontract /></ProtectedRoute>} />
+          <Route path="/updateformcontract/:contractorId" element={
+          <ProtectedRoute tokenKey="admintoken" redirectTo="/adminloginpage"><Updateformcontract /></ProtectedRoute>} />
+
+        {/* Contractor protected routes */}
+        <Route path='/contractorpage' element={
+          <ProtectedRoute tokenKey="contracttoken" redirectTo="/workerloginpage"><ContractorPage /></ProtectedRoute>} />
+        <Route path='/myworkscontractor' element={
+          <ProtectedRoute tokenKey="contracttoken" redirectTo="/workerloginpage"><Myworkscontractor /></ProtectedRoute>} />
         
         
-
-
 
       </Routes>
-
     </div>
   )
 }

@@ -41,6 +41,21 @@ const AdminPage = () => {
                 </div>
             </div>
         </div>
+
+         <div className="user-footer">
+                <div className="home" onClick={()=>{navigate('/adminpage')}}>
+                    <p>Home</p>
+                    
+                </div>
+
+                <div className="logout"onClick={()=>{
+                    localStorage.removeItem('admintoken');
+                    navigate('/')
+
+                }}>
+                    <p>Logout</p>
+                </div>
+            </div>
     </div>
   )
 }

@@ -57,6 +57,7 @@ const UserPage = () => {
 
                 <div className="logout"onClick={()=>{
                     localStorage.removeItem('token');
+                    localStorage.removeItem('Email');
                     navigate('/')
 
                 }}>
