@@ -1,0 +1,29 @@
+.hero-container{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+    padding: 30px;
+    height: auto;
+    
+}
+.all-btn {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 40px;
+    background-color: aliceblue;
+}
+.all-btn button {
+    background-color: indigo;
+    color: white;
+    padding: 20px 80px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.all-btn button:hover{
+    background-color: rgb(117, 4, 197);
+    transition: all ease-in 0.2s;
+}

@@ -1,0 +1,145 @@
+/* Base styles */
+body {
+    background-color: aliceblue;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.Login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login {
+    border-top: 4px solid #dadada;
+    background-color: white;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.login-logo img {
+    height: 80px;
+    width: 80px;
+}
+
+.login-type p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-content {
+    width: 100%;
+    max-width: 300px;
+}
+
+.input-field label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-field input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #dadada;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-field input:focus {
+    border: 1px solid #aaa;
+}
+
+.login-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.login-btn button {
+    padding: 10px 80px;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn button:hover {
+    background-color: rgb(227, 75, 75);
+}
+
+.signup {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login {
+        padding: 30px 20px;
+    }
+
+    .input-content {
+        max-width: 100%;
+    }
+
+    .login-btn button {
+        padding: 10px 40px;
+        font-size: 14px;
+    }
+
+    .login-logo img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .login-type p {
+        font-size: 18px;
+    }
+
+    .input-field label {
+        font-size: 14px;
+    }
+
+    .input-field input {
+        font-size: 14px;
+    }
+
+    .signup {
+        padding-right: 0;
+        font-size: 13px;
+    }
+}

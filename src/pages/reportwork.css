@@ -1,0 +1,72 @@
+.main-report-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* ================== TABLE VIEW (Desktop) ================== */
+.report-table-view {
+  display: block;
+}
+
+.report-table-view table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.report-table-view th,
+.report-table-view td {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.report-table-view th {
+  background-color: #f1f1f1;
+  font-weight: 600;
+}
+
+/* ================== CARD VIEW (Mobile) ================== */
+.report-card-view {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.report-card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.report-card p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+/* ================== RESPONSIVE RULES ================== */
+@media (max-width: 768px) {
+  .report-table-view {
+    display: none;
+  }
+
+  .report-card-view {
+    display: flex;
+  }
+
+  .main-report-container {
+    padding: 10px;
+  }
+}
+
+.no-data {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+  padding: 20px;
+}

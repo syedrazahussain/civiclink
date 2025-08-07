@@ -1,0 +1,95 @@
+.mainupdatecontractlistcontainer {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* ================== TABLE VIEW (Desktop) ================== */
+.contract-table-view {
+  display: block;
+}
+
+.contract-table-view table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contract-table-view th,
+.contract-table-view td {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.contract-table-view th {
+  background-color: #f1f1f1;
+  font-weight: 600;
+}
+
+.contract-table-view td button {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================== CARD VIEW (Mobile) ================== */
+.contract-card-view {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contract-card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contract-card p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.contract-card button {
+  margin-top: 10px;
+  background-color: #28a745;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ================== RESPONSIVE RULES ================== */
+@media (max-width: 768px) {
+  .contract-table-view {
+    display: none;
+  }
+
+  .contract-card-view {
+    display: flex;
+  }
+
+  .mainupdatecontractlistcontainer {
+    padding: 10px;
+  }
+}
+
+.no-data {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+  padding: 20px;
+}

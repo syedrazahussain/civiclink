@@ -1,0 +1,124 @@
+.complaint-form-container{
+    margin: 50px 100px;
+    background-color: white;
+    box-shadow: 4px 5px 12px rgba(0, 0, 0, 0.3);
+}
+.complaint-heading h1{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    color: indigo;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    
+    
+    
+}
+.input-field1{
+    display: inline-block;
+    
+    margin: 20px;
+}
+.input-field1 textarea {
+    height: 100px;
+    width: 300px;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid #dadada;
+}
+.input-field1 input{
+    padding: 10px;
+    outline: 0px;
+    border-radius: 10px;
+    border: 2px solid #dadada;
+    width: 300px;
+    font-size: 20px;
+}
+.input-field1 input:focus{
+    border: 2px solid;
+}
+.input-field1 label{
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+}
+.btn button {
+    background-color: green;
+    color: white;
+    outline: none;
+    border-radius: 10px;
+    padding: 18px 100px;
+    font-size: 18px;
+    font-weight: bold;
+    
+
+}
+.input-field1 textarea:focus{
+    border: 2px solid;
+}
+.btn button:hover {
+    background-color: rgb(0, 255, 0);
+    
+}
+
+@media (max-width: 480px) {
+    .complaint-form-container {
+        width: 100%;
+        margin: 0px !important;
+        padding: 0px !important;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .complaint-heading h1 {
+        font-size: 20px;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .form {
+        padding: 0px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-field1 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .input-field1 input,
+    .input-field1 textarea {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .input-field1 label {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .btn {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .btn button {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+}
+
+

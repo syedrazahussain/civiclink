@@ -1,0 +1,72 @@
+.main-userdata-container {
+  padding: 30px;
+  background-color: #f9f9f9;
+}
+
+/* ===== Desktop Table View ===== */
+.userdata-table-view {
+  display: block;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f1f1f1;
+  font-weight: bold;
+}
+
+/* ===== Mobile Card View ===== */
+.userdata-card-view {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.userdata-card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.userdata-card p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+/* ===== Responsive Rules ===== */
+@media (max-width: 768px) {
+  .userdata-table-view {
+    display: none;
+  }
+
+  .userdata-card-view {
+    display: flex;
+  }
+
+  .main-userdata-container {
+    padding: 15px;
+  }
+}
+
+.no-data {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  padding: 20px;
+}
